@@ -1,0 +1,27 @@
+name: Compile and push resume
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile resume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+
+      - name: Commit resume changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: resume.pdf
+          author_name: bridgette wu
+          author_email: "bridgette.x.wu@gmail.com"
+          message: "chore: update compiled resume pdf"
+
