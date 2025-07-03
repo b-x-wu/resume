@@ -4,30 +4,35 @@
 \usepackage{enumitem}
 \usepackage{dejavu}
 \usepackage[T1]{fontenc}
-
-% definitions
-\def\lralign #1#2{#1\hfill#2}
-\def\experience #1#2#3{\vspace{6pt}\lralign{\textbf{\large#1}}{{#2}}\\#3}
-\def\sectionheader #1{\vspace{15pt}\textbf{\Large #1}}
-% end definitions
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{soul}
 
 % preamble
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
 \setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt}
 \setlist[description]{noitemsep, topsep=0pt}
-\setstretch{1.5}
+\setstretch{1.4}
 \renewcommand{\familydefault}{\sfdefault}
+\setul{1pt}{0.5pt}
 % end preamble
+
+% definitions
+\def\lralign #1#2{#1\hfill#2}
+\def\experience #1#2#3{\vspace{6pt}\lralign{\textbf{\large#1}}{{#2}}\\#3}
+\def\sectionheader #1{\vspace{15pt}\textbf{\Large #1}}
+\def\link #1#2{\href{#1}{\ul{#2}}}
+% end definitions
 
 \begin{document}
 \textbf{\LARGE Bridgette Wu}
 
-she/her $\mid$ bridgette.x.wu@gmail.com $\mid$ b-x-wu.online $\mid$ Seattle, WA
+she/her $\mid$ \link{mailto:bridgette.x.wu@gmail.com}{bridgette.x.wu@gmail.com} $\mid$ \link{https://github.com/b-x-wu}{github.com/b-x-wu} $\mid$ Seattle, WA
 
 \sectionheader{Work Experience}
 
-\experience{Software Development Engineer II}{Mar. 2025}{\textbf{Amazon}}
+\experience{Software Development Engineer II}{Mar. 2025 - Present}{\textbf{Amazon}}
 \begin{itemize}
 \item Coordinated system design proposals across three teams of engineers to build AI solutions for
 processing hundreds of pages of legal documentation
@@ -46,27 +51,32 @@ two hundred days a year of ticket dwell time
 pain points responsible for 20 hours a week of churn by giving visibility into pages of business
 \end{itemize}
 
-\experience{Software Development Engineering Intern}{June 2022 - Aug. 2022}{\textbf{Amazon}}
-
-\begin{itemize}
-\item Created a web app with a back end written in Java and a front-end written in React using
-Typescript all served with AWS CloudWatch
-
-\item Delivered a 30-minute demo presentation to 20 clients and composed a three-page wiki article
-detailing the service for future developers
-\end{itemize}
-
 \sectionheader{Education}
 
 \experience{New York University}{Sept. 2019 - Dec. 2022}{BA in Mathematics and Computer Science, Minor in Data Science}
 
+\sectionheader{Projects}
+
+\experience{\link{https://b-x-wu.online/}{b-x-wu.online}}{}{Self-hosted portfolio website integrated with CI/CD}
+
+\begin{itemize}
+\item Relevant skills: Rust, React, TypeScript, Bash, Docker, IP Configuration
+\end{itemize}
+
+\experience{\link{https://github.com/SubstanceSearch/SubstanceSearch}{SubstanceSearch}}{}{Open source aggregation site for harm reduction resources}
+
+\begin{itemize}
+\item Relevant skills: Python, Flask, JavaScript, QA Testing, Project Management
+\end{itemize}
+
+
 \sectionheader{Skills}
 
 \begin{description}
-\item[Programming:] TypeScript, Java, Scala, Python, C, Bash, Rust
+\item[Programming -] TypeScript, Java, Scala, Python, C, Bash, Rust
 
-\item[Frameworks and Software:] Next.js, React, AWS, PyTorch, SQL
+\item[Frameworks and Software -] Next.js, React, AWS, PyTorch, SQL
 
-\item[Foreign Language:] English, Mandarin
+\item[Foreign Language -] English, Mandarin
 \end{description}
 \end{document}
