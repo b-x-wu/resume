@@ -1,12 +1,24 @@
 # Bridgette Wu
 
-she/her \| <bridgette.x.wu@gmail.com> \| [github.com/b-x-wu](https://github.com/b-x-wu) \| Seattle, WA
+she/her \| <bridgette.x.wu@gmail.com> \| [github.com/b-x-wu](https://github.com/b-x-wu) \| San Francisco, CA
 
 ## Work Experience
 
+### Senior Software Engineer — Patreon
+
+July 2026 - Present \| San Francisco, CA
+
+### Software Engineer — Patreon
+
+Sept. 2025 - July 2026 \| San Francisco, CA
+
+- Designed a company-wide initiative to link backend API types with frontend code, eliminating a common class of recurring production bugs and incidents
+
+- Led the rollout of automated accessibility testing and clear-cut accessibility standards ahead of legal compliance requirements, becoming the go-to accessibility expert across teams
+
 ### Software Development Engineer II — Amazon
 
-Mar. 2025 - Present \| Seattle, WA
+Mar. 2025 - Sept. 2025 \| Seattle, WA
 
 - Coordinated system design proposals across three teams of engineers to build AI solutions for processing hundreds of pages of legal documentation
 
@@ -39,11 +51,3 @@ Self-hosted portfolio website integrated with CI/CD
 Community driven harm reduction platform
 
 - Relevant skills: Python, Flask, JavaScript, QA Testing, Project Management
-
-## Skills
-
-- **Programming** — TypeScript, Java, Scala, Python, C, Bash, Rust
-
-- **Frameworks and Software** — Next.js, React, AWS, PyTorch, SQL
-
-- **Foreign Language** — English, Mandarin
