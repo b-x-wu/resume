@@ -4,10 +4,6 @@ she/her \| <bridgette.x.wu@gmail.com> \| [github.com/b-x-wu](https://github.com/
 
 ## Work Experience
 
-### Senior Software Engineer — Patreon
-
-July 2026 - Present \| San Francisco, CA
-
 ### Software Engineer — Patreon
 
 Sept. 2025 - July 2026 \| San Francisco, CA
@@ -36,7 +32,7 @@ Oct. 2023 - Mar. 2025 \| Seattle, WA
 
 ### New York University
 
-BA in Mathematics and Computer Science, Minor in Data Science \| Sept. 2019 - Dec. 2022
+BA in Mathematics and Computer Science \| Sept. 2019 - Dec. 2022
 
 ## Projects
 
