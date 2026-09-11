@@ -13,16 +13,31 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v4
 
-      - name: Compile resume
-        uses: xu-cheng/latex-action@v3
+      - name: Cache tectonic packages
+        uses: actions/cache@v4
         with:
-          root_file: resume.tex
+          path: ~/.cache/Tectonic
+          key: tectonic-0.15.0-${{ runner.os }}
+
+      - name: Install tectonic and pandoc
+        run: |
+          mkdir -p "$HOME/.local/bin"
+          curl -sL https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.15.0/tectonic-0.15.0-x86_64-unknown-linux-musl.tar.gz \
+            | tar xz -C "$HOME/.local/bin" tectonic
+          curl -sL https://github.com/jgm/pandoc/releases/download/3.6.4/pandoc-3.6.4-linux-amd64.tar.gz \
+            | tar xz -C "$HOME/.local/bin" --strip-components=2 pandoc-3.6.4/bin/pandoc
+
+      - name: Compile resume PDF
+        run: $HOME/.local/bin/tectonic resume.tex
+
+      - name: Generate README
+        run: $HOME/.local/bin/pandoc resume.tex -t gfm --wrap=none -o README.md
 
       - name: Commit resume changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: resume.pdf
-          author_name: bridgette wu
-          author_email: "bridgette.x.wu@gmail.com"
-          message: "chore: update compiled resume pdf"
+        run: |
+          git config user.name "bridgette wu"
+          git config user.email "bridgette.x.wu@gmail.com"
+          git add resume.pdf README.md
+          git diff --staged --quiet || git commit -m "chore: update resume pdf and readme"
+          git push
 

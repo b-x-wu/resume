@@ -6,76 +6,77 @@
 \usepackage[T1]{fontenc}
 \usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
-\usepackage{soul}
+\usepackage{titlesec}
 
 % preamble
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
 \setlist[itemize]{leftmargin=*, noitemsep, topsep=0pt}
-\setlist[description]{noitemsep, topsep=0pt}
 \setstretch{1.4}
 \renewcommand{\familydefault}{\sfdefault}
-\setul{1pt}{0.5pt}
+\setcounter{secnumdepth}{-2}
+
+\titleformat{\section}{\normalfont\LARGE\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titleformat{\subsection}{\normalfont\Large\bfseries}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{15pt}{0pt}
+\titleformat{\subsubsection}{\normalfont\large\bfseries}{}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{6pt}{0pt}
 % end preamble
 
-% definitions
-\def\lralign #1#2{#1\hfill#2}
-\def\experience #1#2#3{\vspace{6pt}\lralign{\textbf{\large#1}}{{#2}}\\#3}
-\def\sectionheader #1{\vspace{15pt}\textbf{\Large #1}}
-\def\link #1#2{\href{#1}{\ul{#2}}}
-% end definitions
-
 \begin{document}
-\textbf{\LARGE Bridgette Wu}
+\section{Bridgette Wu}
 
-she/her $\mid$ \link{mailto:bridgette.x.wu@gmail.com}{bridgette.x.wu@gmail.com} $\mid$ \link{https://github.com/b-x-wu}{github.com/b-x-wu} $\mid$ Seattle, WA
+she/her | \href{mailto:bridgette.x.wu@gmail.com}{bridgette.x.wu@gmail.com} | \href{https://github.com/b-x-wu}{github.com/b-x-wu} | Seattle, WA
 
-\sectionheader{Work Experience}
+\subsection{Work Experience}
 
-\experience{Software Development Engineer II}{Mar. 2025 - Present}{\lralign{\textbf{Amazon}}{Seattle, WA}}
+\subsubsection{Software Development Engineer II --- Amazon}
+Mar. 2025 - Present | Seattle, WA
+
 \begin{itemize}
-\item Coordinated system design proposals across three teams of engineers to build AI solutions for
-processing hundreds of pages of legal documentation
+\item Coordinated system design proposals across three teams of engineers to build AI solutions for processing hundreds of pages of legal documentation
 
-\item Developed automated product financial evaluation systems that drove supplier negotiations for
-hundreds of in-development products
+\item Developed automated product financial evaluation systems that drove supplier negotiations for hundreds of in-development products
 \end{itemize}
 
-\experience{Software Development Engineer}{Oct. 2023 - Mar. 2025}{\lralign{\textbf{Amazon}}{Seattle, WA}}
+\subsubsection{Software Development Engineer --- Amazon}
+Oct. 2023 - Mar. 2025 | Seattle, WA
 
 \begin{itemize}
-\item Designed and implemented a ticket routing system using React Router that collectively saved
-200 days a year of ticket dwell time
+\item Designed and implemented a ticket routing system using React Router that collectively saved 200 days a year of ticket dwell time
 
 \item Gathered stakeholder feedback to develop requirements and enhancements that eliminated 20 hours a week of churn by giving visibility into business logic
 \end{itemize}
 
-\sectionheader{Education}
+\subsection{Education}
 
-\experience{New York University}{Sept. 2019 - Dec. 2022}{BA in Mathematics and Computer Science, Minor in Data Science}
+\subsubsection{New York University}
+BA in Mathematics and Computer Science, Minor in Data Science | Sept. 2019 - Dec. 2022
 
-\sectionheader{Projects}
+\subsection{Projects}
 
-\experience{\link{https://b-x-wu.online/}{b-x-wu.online}}{}{Self-hosted portfolio website integrated with CI/CD}
+\subsubsection{\href{https://b-x-wu.online/}{b-x-wu.online}}
+Self-hosted portfolio website integrated with CI/CD
 
 \begin{itemize}
 \item Relevant skills: Rust, React, TypeScript, Bash, Docker, Linux, Server Management
 \end{itemize}
 
-\experience{\link{https://github.com/SubstanceSearch/SubstanceSearch}{SubstanceSearch}}{}{Community driven harm reduction platform}
+\subsubsection{\href{https://github.com/SubstanceSearch/SubstanceSearch}{SubstanceSearch}}
+Community driven harm reduction platform
 
 \begin{itemize}
 \item Relevant skills: Python, Flask, JavaScript, QA Testing, Project Management
 \end{itemize}
 
+\subsection{Skills}
 
-\sectionheader{Skills}
+\begin{itemize}
+\item \textbf{Programming} --- TypeScript, Java, Scala, Python, C, Bash, Rust
 
-\begin{description}
-\item[Programming -] TypeScript, Java, Scala, Python, C, Bash, Rust
+\item \textbf{Frameworks and Software} --- Next.js, React, AWS, PyTorch, SQL
 
-\item[Frameworks and Software -] Next.js, React, AWS, PyTorch, SQL
-
-\item[Foreign Language -] English, Mandarin
-\end{description}
+\item \textbf{Foreign Language} --- English, Mandarin
+\end{itemize}
 \end{document}
