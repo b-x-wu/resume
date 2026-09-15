@@ -10,7 +10,7 @@ Sept. 2025 - July 2026 \| San Francisco, CA
 
 - Designed a company-wide initiative to link backend API types with frontend code, eliminating a common class of recurring production bugs and incidents
 
-- Led the rollout of automated accessibility testing and clear-cut accessibility standards ahead of legal compliance requirements, becoming the go-to accessibility expert across teams
+- Led the rollout of automated accessibility testing and authored organizational auditing procedures ahead of legal compliance requirements
 
 ### Software Development Engineer II — Amazon
 
